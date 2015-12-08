@@ -10,7 +10,10 @@ RUN apt-get -qy update && \
                        build-essential make automake libunicode-string-perl && \
     cpan -i Authen::NTLM Data::Uniqid Test::Pod && \
     git clone git://github.com/imapsync/imapsync.git /opt/imapsync && \
-    cd /opt/imapsync && make install
+    cd /opt/imapsync && make install && make clean && \
+    apt-get clean autoclean && \
+    apt-get -y autoremove   && \
+    rm -rf /var/lib/{apt,dpkg,cache,log}/
 	  
 
 ENTRYPOINT ["/usr/bin/imapsync"]
