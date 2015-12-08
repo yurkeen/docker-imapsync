@@ -1,6 +1,6 @@
 FROM debian:latest
 
-MAINTAINET Yury Evtikhov <yury@evtikhov.info>
+MAINTAINER Yury Evtikhov <yury@evtikhov.info>
 
 ENV DEBIAN_FRONTEND noninteractive
 
