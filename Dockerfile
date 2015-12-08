@@ -9,8 +9,8 @@ RUN apt-get -qy update && \
                        libdigest-md5-file-perl libterm-readkey-perl libfile-copy-recursive-perl \
                        build-essential make automake libunicode-string-perl && \
     cpan -i Authen::NTLM Data::Uniqid Test::Pod && \
-	  git clone git://github.com/imapsync/imapsync.git /opt/imapsync && \
-	  cd /opt/imapsync && make install
+    git clone git://github.com/imapsync/imapsync.git /opt/imapsync && \
+    cd /opt/imapsync && make install
 	  
 
 ENTRYPOINT ["/usr/bin/imapsync"]
