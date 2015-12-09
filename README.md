@@ -1,5 +1,5 @@
 # imapsync-docker
-Dockerfile for imapsync utility
+Dockerfile for the imapsync utility
 
 ## Usage
 
